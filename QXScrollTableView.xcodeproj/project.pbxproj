@@ -15,6 +15,10 @@
 		7E19B8021FBA09E000BB319C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E19B8001FBA09E000BB319C /* LaunchScreen.storyboard */; };
 		7E19B80D1FBA09E000BB319C /* QXScrollTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19B80C1FBA09E000BB319C /* QXScrollTableViewTests.m */; };
 		7E19B8181FBA09E000BB319C /* QXScrollTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19B8171FBA09E000BB319C /* QXScrollTableViewUITests.m */; };
+		7E19B8281FBA0DD200BB319C /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19B8271FBA0DD200BB319C /* BaseTableViewCell.m */; };
+		7E19B82B1FBA0E6100BB319C /* QXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19B82A1FBA0E6100BB319C /* QXScrollView.m */; };
+		7E19B82E1FBA0EC000BB319C /* QXScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19B82D1FBA0EC000BB319C /* QXScrollViewCell.m */; };
+		7E19B8301FBA0ECC00BB319C /* QXScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E19B82F1FBA0ECC00BB319C /* QXScrollViewCell.xib */; };
 		966A907EAA4F694E84F9C917 /* libPods-QXScrollTableView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F40C5F2DBA3311A2B9ACFB /* libPods-QXScrollTableView.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,14 @@
 		7E19B8131FBA09E000BB319C /* QXScrollTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QXScrollTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E19B8171FBA09E000BB319C /* QXScrollTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QXScrollTableViewUITests.m; sourceTree = "<group>"; };
 		7E19B8191FBA09E000BB319C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E19B8251FBA0B3200BB319C /* QXScrollTableViewPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QXScrollTableViewPrefixHeader.pch; sourceTree = "<group>"; };
+		7E19B8261FBA0DD200BB319C /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		7E19B8271FBA0DD200BB319C /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		7E19B8291FBA0E6100BB319C /* QXScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXScrollView.h; sourceTree = "<group>"; };
+		7E19B82A1FBA0E6100BB319C /* QXScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXScrollView.m; sourceTree = "<group>"; };
+		7E19B82C1FBA0EC000BB319C /* QXScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXScrollViewCell.h; sourceTree = "<group>"; };
+		7E19B82D1FBA0EC000BB319C /* QXScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXScrollViewCell.m; sourceTree = "<group>"; };
+		7E19B82F1FBA0ECC00BB319C /* QXScrollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QXScrollViewCell.xib; sourceTree = "<group>"; };
 		863C4D9018A91C615AF4ED44 /* Pods-QXScrollTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QXScrollTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-QXScrollTableView/Pods-QXScrollTableView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +133,14 @@
 				7E19B7F61FBA09E000BB319C /* AppDelegate.m */,
 				7E19B7F81FBA09E000BB319C /* ViewController.h */,
 				7E19B7F91FBA09E000BB319C /* ViewController.m */,
+				7E19B8261FBA0DD200BB319C /* BaseTableViewCell.h */,
+				7E19B8271FBA0DD200BB319C /* BaseTableViewCell.m */,
+				7E19B8291FBA0E6100BB319C /* QXScrollView.h */,
+				7E19B82A1FBA0E6100BB319C /* QXScrollView.m */,
+				7E19B82C1FBA0EC000BB319C /* QXScrollViewCell.h */,
+				7E19B82D1FBA0EC000BB319C /* QXScrollViewCell.m */,
+				7E19B82F1FBA0ECC00BB319C /* QXScrollViewCell.xib */,
+				7E19B8251FBA0B3200BB319C /* QXScrollTableViewPrefixHeader.pch */,
 				7E19B7FB1FBA09E000BB319C /* Main.storyboard */,
 				7E19B7FE1FBA09E000BB319C /* Assets.xcassets */,
 				7E19B8001FBA09E000BB319C /* LaunchScreen.storyboard */,
@@ -273,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E19B8301FBA0ECC00BB319C /* QXScrollViewCell.xib in Resources */,
 				7E19B8021FBA09E000BB319C /* LaunchScreen.storyboard in Resources */,
 				7E19B7FF1FBA09E000BB319C /* Assets.xcassets in Resources */,
 				7E19B7FD1FBA09E000BB319C /* Main.storyboard in Resources */,
@@ -302,9 +323,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QXScrollTableView/Pods-QXScrollTableView-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,6 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E19B8281FBA0DD200BB319C /* BaseTableViewCell.m in Sources */,
+				7E19B82B1FBA0E6100BB319C /* QXScrollView.m in Sources */,
+				7E19B82E1FBA0EC000BB319C /* QXScrollViewCell.m in Sources */,
 				7E19B7FA1FBA09E000BB319C /* ViewController.m in Sources */,
 				7E19B7F71FBA09E000BB319C /* AppDelegate.m in Sources */,
 				7E19B7F41FBA09E000BB319C /* main.m in Sources */,
@@ -501,6 +528,7 @@
 			baseConfigurationReference = 71A2D129A4059FE9073675B6 /* Pods-QXScrollTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = QXScrollTableView/QXScrollTableViewPrefixHeader.pch;
 				INFOPLIST_FILE = QXScrollTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yskj.www.QXScrollTableView;
@@ -513,6 +541,7 @@
 			baseConfigurationReference = 863C4D9018A91C615AF4ED44 /* Pods-QXScrollTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = QXScrollTableView/QXScrollTableViewPrefixHeader.pch;
 				INFOPLIST_FILE = QXScrollTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yskj.www.QXScrollTableView;
@@ -585,6 +614,7 @@
 				7E19B81E1FBA09E000BB319C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E19B81F1FBA09E000BB319C /* Build configuration list for PBXNativeTarget "QXScrollTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -593,6 +623,7 @@
 				7E19B8211FBA09E000BB319C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E19B8221FBA09E000BB319C /* Build configuration list for PBXNativeTarget "QXScrollTableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +632,7 @@
 				7E19B8241FBA09E000BB319C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

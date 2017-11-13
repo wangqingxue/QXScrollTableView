@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A451C6F7D72894071101B9A571CACD2C'
+               BlueprintIdentifier = '22847CCFE3A9EA19E07B775F42C6142C'
                BlueprintName = 'Pods-QXScrollTableView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-QXScrollTableView.a'>

@@ -10,6 +10,12 @@
 
 @implementation QXScrollView
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    self.showsVerticalScrollIndicator = NO;
+    self.showsHorizontalScrollIndicator = NO;
+    self.bounces = NO;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

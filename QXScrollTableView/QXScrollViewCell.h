@@ -10,4 +10,6 @@
 
 @interface QXScrollViewCell : UIView
 
+- (void)setValueWithArray:(NSArray *)array;
+
 @end
