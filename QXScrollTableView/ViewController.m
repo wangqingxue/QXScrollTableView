@@ -25,6 +25,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableHeaderView = nil;
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 #pragma mark --TableViewDelegate
