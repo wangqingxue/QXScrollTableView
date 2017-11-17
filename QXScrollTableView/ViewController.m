@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "BaseTableViewCell.h"
-
+#import <MJRefresh/MJRefresh.h>
 
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -25,6 +25,11 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableHeaderView = nil;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.tableView.mj_header endRefreshing];
+        });
+    }];
     self.navigationController.navigationBar.translucent = NO;
 }
 
@@ -43,6 +48,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     BaseTableViewCell *baseCell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass([BaseTableViewCell class]) forIndexPath:indexPath];
+    baseCell.controller = self;
+    baseCell.baseTableView = self.tableView;
+    baseCell.qxScrollView.contentOffset = self.tableViewContentOffset;
     [baseCell setValueWithArray:self.arrayData];
     return baseCell;
 }

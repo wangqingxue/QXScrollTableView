@@ -7,12 +7,11 @@
 //
 
 #import "BaseTableViewCell.h"
-#import "QXScrollView.h"
 #import "QXScrollViewCell.h"
 
-@interface BaseTableViewCell ()
+@interface BaseTableViewCell ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-@property (weak, nonatomic) IBOutlet QXScrollView *qxScrollView;
+
 @property (nonatomic, strong) QXScrollViewCell *qxScrollCell;
 
 @end
@@ -26,10 +25,18 @@
     self.qxScrollCell = [[[NSBundle mainBundle]loadNibNamed:@"QXScrollViewCell" owner:self options:nil]firstObject];
     self.qxScrollCell.frame = CGRectMake(0, 0, 500, 50);
     [self.qxScrollView addSubview:self.qxScrollCell];
+    self.qxScrollView.delegate = self;
 }
 
 - (void)setValueWithArray:(NSArray *)array{
     [self.qxScrollCell setValueWithArray:array];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    for (BaseTableViewCell *cell in self.baseTableView.visibleCells){
+        cell.qxScrollView.contentOffset = scrollView.contentOffset;
+        self.controller.tableViewContentOffset = scrollView.contentOffset;
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, assign)CGPoint tableViewContentOffset;
 
 @end
 
