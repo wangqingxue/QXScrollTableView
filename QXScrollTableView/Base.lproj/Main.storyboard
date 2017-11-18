@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dio-rY-vxc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dio-rY-vxc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,15 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="enE-tf-K0S">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="enE-tf-K0S">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BaseTableViewCell" rowHeight="50" id="K1J-Mp-U6z" customClass="BaseTableViewCell">
-                                        <rect key="frame" x="0.0" y="1" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K1J-Mp-U6z" id="neV-73-uqa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfK-f8-o98">
@@ -72,17 +72,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iME-2n-Rdl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="egT-AQ-crj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="enE-tf-K0S" secondAttribute="bottom" id="JmQ-GC-17Y"/>
-                            <constraint firstItem="enE-tf-K0S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UPa-KA-uyP"/>
+                            <constraint firstItem="enE-tf-K0S" firstAttribute="top" secondItem="iME-2n-Rdl" secondAttribute="bottom" id="gGe-Re-lz0"/>
+                            <constraint firstAttribute="trailing" secondItem="iME-2n-Rdl" secondAttribute="trailing" id="iQD-FV-GmK"/>
                             <constraint firstAttribute="trailing" secondItem="enE-tf-K0S" secondAttribute="trailing" id="m5c-xs-P4a"/>
+                            <constraint firstItem="iME-2n-Rdl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sUt-xU-Hst"/>
+                            <constraint firstItem="iME-2n-Rdl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tld-B3-q5F"/>
                             <constraint firstItem="enE-tf-K0S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="umx-M7-Csn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="QXScrollTableView" id="04h-X3-ejh"/>
                     <connections>
+                        <outlet property="headerView" destination="iME-2n-Rdl" id="aDz-Ek-ChZ"/>
                         <outlet property="tableView" destination="enE-tf-K0S" id="ykT-CQ-dFu"/>
                     </connections>
                 </viewController>
@@ -96,7 +107,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dio-rY-vxc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aBC-Ox-Bbh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

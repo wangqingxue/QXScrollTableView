@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface QXScrollViewCell : UIView
+
+
 
 - (void)setValueWithArray:(NSArray *)array;
 

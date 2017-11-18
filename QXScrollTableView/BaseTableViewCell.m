@@ -26,6 +26,7 @@
     self.qxScrollCell.frame = CGRectMake(0, 0, 500, 50);
     [self.qxScrollView addSubview:self.qxScrollCell];
     self.qxScrollView.delegate = self;
+    
 }
 
 - (void)setValueWithArray:(NSArray *)array{
@@ -37,6 +38,7 @@
         cell.qxScrollView.contentOffset = scrollView.contentOffset;
         self.controller.tableViewContentOffset = scrollView.contentOffset;
     }
+    self.headerView.scrollView.contentOffset = scrollView.contentOffset;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

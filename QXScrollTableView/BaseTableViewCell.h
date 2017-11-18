@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 #import "QXScrollView.h"
+#import "TableHeaderView.h"
 
 @interface BaseTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet QXScrollView *qxScrollView;
+@property (nonatomic, weak)TableHeaderView *headerView;
 @property (nonatomic, weak) UITableView *baseTableView;
 @property (nonatomic, weak) ViewController *controller;
 - (void)setValueWithArray:(NSArray *)array;
