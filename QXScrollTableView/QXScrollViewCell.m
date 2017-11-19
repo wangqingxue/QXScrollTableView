@@ -22,10 +22,10 @@
 - (void)setValueWithArray:(NSArray *)array{
     if ([array count] == 5){
         _labelO.text = array[0];
-        _labelT.text = array[0];
-        _labelThree.text = array[0];
-        _labelFour.text = array[0];
-        _labelFive.text = array[0];
+        _labelT.text = array[1];
+        _labelThree.text = array[2];
+        _labelFour.text = array[3];
+        _labelFive.text = array[4];
     }
 }
 

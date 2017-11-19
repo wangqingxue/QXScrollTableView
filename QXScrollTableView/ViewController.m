@@ -59,13 +59,21 @@
     baseCell.baseTableView = self.tableView;
     baseCell.qxScrollView.contentOffset = self.tableViewContentOffset;
     baseCell.headerView = self.tableHeaderViewXib;
-    [baseCell setValueWithArray:self.arrayData];
+    [baseCell setValueWithArray:self.arrayData[indexPath.row]];
     return baseCell;
 }
 
 - (NSArray *)arrayData{
     if (!_arrayData){
-        _arrayData = @[@"行情1",@"行情1",@"行情1",@"行情1",@"行情1"];
+        NSMutableArray *mutableArray = [[NSMutableArray alloc]init];
+        for (int i = 0; i < 50; i++){
+            NSMutableArray *rowArray = [NSMutableArray arrayWithCapacity:5];
+            for (int y = 0; y < 5; y++){
+                [rowArray addObject:[NSString stringWithFormat:@"第%i行 第%i列",i,y]];
+            }
+            [mutableArray addObject:rowArray];
+        }
+        _arrayData = [NSArray arrayWithArray:mutableArray];
     }
     return _arrayData;
 }

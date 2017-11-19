@@ -7,6 +7,7 @@
 //
 
 #import "TableHeaderView.h"
+#import "QXScrollViewCell.h"
 
 @interface TableHeaderView()
 
@@ -22,7 +23,8 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     self.scrollView.contentSize = CGSizeMake(500, 0);
-    UIView * qxScrollCell = [[[NSBundle mainBundle]loadNibNamed:@"QXScrollViewCell" owner:self options:nil]firstObject];
+    QXScrollViewCell * qxScrollCell = [[[NSBundle mainBundle]loadNibNamed:@"QXScrollViewCell" owner:self options:nil]firstObject];
+    [qxScrollCell setValueWithArray:@[@"标题1",@"标题2",@"标题3",@"标题4",@"标题5"]];
     qxScrollCell.frame = CGRectMake(0, 0, 500, 50);
     [self.scrollView addSubview:qxScrollCell];
 }
